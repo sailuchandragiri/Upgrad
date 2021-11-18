@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #upgrade_sc{
+            height: 400px;
+            width: 1200px;
+            border: 0.5px solid rgb(218, 213, 213);
+            border-radius: 20px;
+            margin: auto;
+            
+        }
+        #name_sc{
+            height: 40%;
+            width: 100%;
+           
+        }
+        #contact_sc{
+            height: 60%;
+            width: 100%;
+            
+            display: flex;
+            gap: 2%;
+        }
+        p{
+            color: rgb(184, 178, 178);
+            margin-left: 420px;
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            color: rgb(201, 42, 42);
+            padding-left: 350px;
+            font-size: 45px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h3{
+            padding-left: 520px;
+            font-size: 28px;
+        }
+        line_sc{
+            color: rgb(168, 164, 164);
+        }
+        #contact1_sc{
+           
+            height: 60%;
+            width: 45%;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+        #contact2_sc{
+            
+            height: 60%;
+            width: 45%;
+            margin-top: 5%;
+            margin-right: 5%;
+        }
+        #line_sc{
+            
+            height: 60%;
+            width: 5%;
+            margin-top: 5%;
+            font-size: 80px;
+        
+            padding-left: 2.5%;
+            color: rgb(204, 197, 197);
+        }
+        #con_ind_sc{
+            font-size: 25px;
+            color: rgb(58, 56, 56);
+            padding-left: 27%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #btn1_sc{
+            font-size: 25px;
+            background-color: black;
+            color: white;
+            width: 80%;
+            border-radius: 8px;
+            padding: 2%;
+            margin-left: 10%;
+            margin-top: 2%;
+        }
+
+        #foot_sc{
+            height: 1750px;
+            width: 100%;
+        
+            background-color: rgb(43, 42, 42);
+        }
+        #btn_des_sc{
+            height: 100px;
+            width: 66%;
+            border: 0.3px solid rgb(233, 230, 230) ;
+            margin-top: 0.5%;
+            margin-left: 17%;
+            border-radius: 8px;
+            margin-bottom: 1%;
+        }
+        #dec_con_sc{
+            color: rgb(126, 125, 125);
+            font-size: 15px;
+            padding-left: 0.5%;
+            padding-top: 1%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #disi_sc{
+            color: rgb(71, 70, 70);
+            font-size: 16px;
+            padding-left: 0.5%;
+            font-style: bold;
+        }
+        #de_con_sc{
+            color: rgb(126, 125, 125);
+            font-size: 15px;
+            padding-left: 0.5%;
+            padding-top: 2%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+        #foot1_sc{
+            height: 400px;
+            width: 70%;
+            
+            margin-left: 14%;
+            display: flex;
+            padding-left: 4.5%;
+
+        }
+        #foot_sec1_sc{
+            height: 100%;
+            width: 25%;
+           
+            padding-top: 5%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #foot_sec2_sc{
+            height: 100%;
+            width: 25%;
+           
+            display: flex;
+            flex-direction: column;
+            padding-top: 5%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #foot_sec3_sc{
+            height: 100%;
+            width: 20%;
+           
+            padding-top: 5%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #foot_sec4_sc{
+            height: 100%;
+            width: 30%;
+            
+            padding-top: 5%;
+        }
+        #up_sc{
+            font-size: 25px;
+            color: white;
+            font-style: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 5%;
+        }
+        #bu_sc{
+            color: white;
+            font-size: 15px;
+            padding-top: 4%;
+            padding-left: 5%;
+        }
+       #icon_sc{
+           display: flex;
+       }
+       .head1_sc{
+           font-style: bold;
+           font-size: 15px;
+           color: white;
+           padding-bottom: 5%;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       .p1_sc{
+           color: gray;
+           font-size: 10px;
+           padding-top: 1%;
+           padding-bottom: 2%;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #head1_btn1_sc{
+           height: 8%;
+           width: 50%;
+           border: 0.5px solid white;
+           border-radius: 8px;
+           color: gray;
+           align-items: center;
+           padding-left: 2%;
+           
+       }
+       #head1_btn2_sc{
+           height: 8%;
+           width: 50%;
+           border: 0.5px solid white;
+           border-radius: 8px;
+           color: gray;
+           align-items: center;
+           margin-top: 5%;
+           padding-left: 2%;
+           
+       }
+       #div_line_sc{
+           padding-left: 15%;
+           padding-right: 15%;
+           color: rgb(161, 159, 159);
+       }
+       #foot2_sc{
+           height: 730px;
+           width: 65%;
+          
+           margin-left: 17%;
+           display: flex;
+       }
+       #foot3_sc{
+           height: 240px;
+           width: 65%;
+           
+           margin-left: 17%;
+           display: flex;
+           margin-top: 0.5%;
+       }
+       #foot4_sc{
+           height: 240px;
+           width: 55%;
+           
+           margin-left: 22%;
+           display: flex;
+           margin-top: 0.5%;
+       }
+       #foot2_sec1_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+       #foot2_sec2_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+       #foot2_sec3_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+       #foot2_sec4_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+       #foot3_sec1_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+       #foot3_sec2_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+       #foot3_sec3_sc{
+           height: 100%;
+           width: 25%;
+        
+       }
+       #foot3_sec4_sc{
+           height: 100%;
+           width: 25%;
+         
+       }
+       #foot4_sec1_sc{
+           height: 100%;
+           width: 25%;
+          
+       }
+       #foot4_sec2_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+       #foot4_sec3_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+       #foot4_sec4_sc{
+           height: 100%;
+           width: 25%;
+           
+       }
+
+
+    </style>
+</head>
+<body>
+   <div id="upgrade_sc">
+       <div id="name_sc">
+           <p>For queries, feedback & assistance</p>
+           <h1>upGrad Learner Support</h1>
+           <h3>(7 AM - 12 AM)</h3>
+       </div>
+       <div id="contact_sc">
+           <div id="contact1_sc">
+               <div id="con_ind_sc">For Indian Nationals</div>
+               <div><button id="btn1_sc">&#128222 1800-210-2020</button></div>
+           </div>
+           <div id="line_sc">|</div>
+           <div id="contact2_sc">
+            <div id="con_ind_sc">For Internationals</div>
+            <div><button id="btn1_sc">&#128222 +912265054631</button></div>
+           </div>
+       </div>
+   </div>
+   <div id="btn_des_sc">
+       <div id="disi_sc">Disclaimer:</div>
+       <div id="dec_con_sc">upGrad is India's largest online higher education company, as per monthly visit data and total visits data for the last 28 days received from similarweb, as on April 13, 2020.</div>
+       <div id="de_con_sc">Deakin University CRICOS Provider Code 00113B.</div>
+   </div>
+   <div id="foot_sc">
+       <div id="foot1_sc">
+           <div id="foot_sec1_sc">
+               <div id="up_sc">upGrad</div>
+               <div id="bu_sc">Building Careers of Tomorrow</div>
+               <div id="icon_sc" style="padding-top: 5%;"><img src="https://tse4.mm.bing.net/th?id=OIP.PRVOOYJrn_HpvB4B5qsAFQHaHa&pid=Api&P=0&w=300&h=300" width="8%" height="8%" style="margin-left: 5%;">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.ryAjOaa8NIvGrIJinaPA4gHaHa&pid=Api&P=0&w=300&h=300" width="8%" height="8%" style="padding-left: 5%;">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.EweiZI5x1TFwSg9aJw6pZgHaHa&pid=Api&P=0&w=300&h=300" width="8%" height="8%" style="padding-left: 5%;">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.pW1yW2xMwoiFLNT68flH_QAAAA&pid=Api&P=0&w=300&h=300" width="8%" height="6%" style="padding-left: 5%;">
+            </div>
+           </div>
+           <div id="foot_sec2_sc">
+            <div class="head1_sc">UPGRAD</div>
+            <div class="p1_sc">About</div>
+            <div class="p1_sc">Careers</div>
+            <div class="p1_sc">Placement Support</div>
+            <div class="p1_sc">UpGrad Blog</div>
+            <div class="p1_sc">Success Stories</div>
+            <div class="p1_sc">For Teams</div>
+            <div class="p1_sc">Data Science Programs for Teams</div>
+            <div class="p1_sc">Product and Technology Programs for Teams</div>
+            <div class="p1_sc">Management Programs for Teams</div>
+            <div class="p1_sc">Online Power Learning</div>
+            <div class="p1_sc">Xchange</div>
+            <div class="p1_sc">BaseCamp</div>
+            <div class="p1_sc">For Business</div>
+            <div class="p1_sc">Short Videos</div>
+           
+           </div>
+           <div id="foot_sec3_sc">
+            <div class="head1_sc">SUPPORT</div>
+            <div class="p1_sc">Contact</div>
+            <div class="p1_sc">Terms & Conditions</div>
+            <div class="p1_sc">Privacy Policy</div>
+            
+           
+           </div>
+           <div id="foot_sec4_sc">
+               <div id="head1_btn1_sc"><img src="https://tse1.mm.bing.net/th?id=OIP.mghKY3vPMTo4Tx7Up_ttsQHaHa&pid=Api&P=0&w=300&h=300" width="20%" height="90%">Get the andriod app</div>
+               <div id="head1_btn2_sc"><img src="https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png" width="20%" height="90%">Get the IOS app</div>
+           </div>
+       </div>
+       <div id="div_line_sc"><hr/></div>
+       <div id="foot2_sc">
+            <div id="foot2_sec1_sc">
+                <div class="head1_sc">DATA SCIENCE</div>
+                <div class="p1_sc">Data Science | Master's Degree</div>
+                <div class="p1_sc">Data Science | Executive PG Programme</div>
+                <div class="p1_sc">Data Science | Master of Science</div>
+                <div class="p1_sc">Data Science for Business Decision Making | Prof...</div>
+                <div class="p1_sc">Data Science | Advanced Certificate Programme</div>
+                <div class="p1_sc">Data Science | Executive Programme</div>
+                <div class="p1_sc">Data Science | Master of Science</div>
+                <div class="p1_sc">Machine Learning & AI | Executive PG Programme</div>
+                <div class="p1_sc">Machine Learning & NLP | Advanced Certificate P...</div>
+                <div class="p1_sc">Machine Learning & Deep Learning | Advanced C...</div>
+                <div class="p1_sc">Machine Learning & AI | Master of Science</div>
+                <div class="p1_sc">Machine Learning & Cloud | Advanced Certification</div>
+                <div class="p1_sc">M.Sc. in Machine Learning & AI | Master of Science</div>
+                
+            </div>
+            <div id="foot2_sec2_sc">
+                <div class="head1_sc">MANAGEMENT</div>
+                <div class="p1_sc">Strategic Innovation, Digital Marketing and Business..</div>
+                <div class="p1_sc">Business Administration | Doctorate</div>
+                <div class="p1_sc">Product Management | Certification</div>
+                <div class="p1_sc">Design Thinking | Certification</div>
+                <div class="p1_sc">Business Administration | Master's Degree</div>
+                <div class="p1_sc">Human Resource Management | Excecutive PG Pr...</div>
+                <div class="p1_sc">Deakin Business School | MBA (Global)</div>
+                <div class="p1_sc">Liverpool Business School | MBA (Global)</div>
+                <div class="p1_sc">MBA in Digital Finance and Banking | MBA</div>
+                <div class="p1_sc">Deakin Business School | MBA (Global)</div>
+                <div class="p1_sc">Digital Marketing and Communication | Advanced...</div>
+                <div class="p1_sc">Management | PG Program</div>
+                <div class="p1_sc">PG Diploma in Management | PG Diploma</div>
+                <div class="p1_sc">upGrad's Job Linked Management | PG Program</div>
+                <div class="p1_sc">Integrated Supply Chain Management | Global M...</div>
+                <div class="p1_sc">Effective Leadership and Management | Global Pr...</div>
+                <div class="p1_sc">Business Administration (General) | Master's Degr...</div>
+                <div class="p1_sc">HR Management and Analytics | Professional Cert....</div>
+                <div class="p1_sc">Deakin Business School and MICA | MBA (Global)...</div>
+                <div class="p1_sc">Digital Branding & Advertising | Advanced Certific...</div>
+                <div class="p1_sc">Master of Business Administration (General) | MBA</div>
+                <div class="p1_sc">Masters Qualifying Program | MAsters Qualifying ...</div>
+                <div class="p1_sc">Advertising & Branding | MBA</div>
+                <div class="p1_sc">Strategy & Leadership | MBA</div>
+                <div class="p1_sc">Fundamental Specifications | MBA</div>
+                <div class="p1_sc">MBA with Advanced Specializations | Master's De...</div>
+                <div class="p1_sc">Essex | Online MBA</div>
+                <div class="p1_sc">Project Management | PG Courses</div>
+                <div class="p1_sc">Human Resource Management | PG Courses</div>
+                <div class="p1_sc">Business Management | UG & PG Courses</div>
+                <div class="p1_sc">Digital Marketing | PG Courses</div>
+                <div class="p1_sc">Business with Finance | PG Courses</div>
+                
+            </div>
+            <div id="foot2_sec3_sc">
+                <div class="head1_sc">SOFTWARE & TECHNOLOGY</div>
+                <div class="p1_sc">Computer Science | Master's Degree</div>
+                <div class="p1_sc">Software Development - Spl. in Cyber Security | E</div>
+                <div class="p1_sc">Software Development - Spl. in Cloud computing...</div>
+                <div class="p1_sc">Computer Applications | Master's Degree</div>
+                <div class="p1_sc">Computer Applications | Artificial Intelligence | Ma...</div>
+                <div class="p1_sc">Computer Applications | Cyber Security | Master's...</div>
+                <div class="p1_sc">Software Development - Spl. in Full Stack Develo...</div>
+                <div class="p1_sc">Software Development - Spl. in Big Data | Executi...</div>
+                <div class="p1_sc">Software Development - Spl. in DevOps | Executi..</div>
+                <div class="p1_sc">Software Development - Spl. in Blockchain | Exec....</div>
+                <div class="p1_sc">Software Engineering | PG Certification</div>
+                <div class="p1_sc">Cyber Security | Advanced Certificate Programme</div>
+                <div class="p1_sc">Cloud Computing | Advanced Certificate Program...</div>
+                <div class="p1_sc">Big Data | Advanced Certificate Programme</div>
+                <div class="p1_sc">DevOps | Advanced Certificate Programme</div>
+                <div class="p1_sc">Blockchain | Advanced Certificate Programme</div>
+                <div class="p1_sc">Computer Applications | Master's Degree</div>
+                <div class="p1_sc">Computer Science | PG Courses</div>
+                <div class="p1_sc">Cyber Security | PG Courses</div>
+            </div>
+            <div id="foot2_sec4_sc">
+                <div class="head1_sc">BUSINESS ANALYTICS</div>
+                <div class="p1_sc">Business Analytics | Executive PG Programme</div>
+                <div class="p1_sc">Business Analytics | Global Master Certificate in B...</div>
+                <div class="p1_sc">Business Analytics | Business Analytics Certification</div>
+                <div class="p1_sc">Business Analytics | Certificate Program</div>
+                <div class="p1_sc">Business Analytics | PG Courses</div>
+               
+            </div>
+       </div>
+       <div id="div_line_sc"><hr></div>
+       <div id="foot3_sc">
+        <div id="foot3_sec1_sc">
+            <div class="head1_sc">STUDY ABROAD</div>
+            <div class="p1_sc">Data Science | Master Degree</div>
+            <div class="p1_sc">International Management | Master's Degree</div>
+            <div class="p1_sc">Business degree programs in Australia for CU BB....</div>
+            <div class="p1_sc">Cyber Security | Master's Degree</div>
+            <div class="p1_sc">Bachelor of Information Technology Pathway to A....</div>
+            <div class="p1_sc">B.Sc Computer Science Pathway to USA | Bachel....</div>
+            <div class="p1_sc">Bachelor of Business Pathway to Canada | Bache.... </div>
+            <div class="p1_sc">Bachelor of Computer Information Systems Pathw....</div>
+            <div class="p1_sc">Bachelor of Business Administration Pathway to ....</div>
+           
+            
+        </div>
+        <div id="foot3_sec2_sc">
+            <div class="head1_sc">ARTS</div>
+            <div class="p1_sc">Communication and Journalism (English) | Master....</div>
+            <div class="p1_sc">Public Relations (English) | Master of Arts</div>
+            <div class="p1_sc">Master of Arts (Journalism & Mass Communication...</div>
+                   
+            
+            
+        </div>
+        <div id="foot3_sec3_sc">
+            <div class="head1_sc">COMMERCE</div>
+            <div class="p1_sc">Finance and Systems | Master of Commerce</div>
+           
+           
+        </div>
+        <div id="foot3_sec4_sc">
+            <div class="head1_sc">LAW</div>
+            <div class="p1_sc">Jindal Global Law School (JGLS) | LL.M. in Corpor...</div>
+            <div class="p1_sc">UG & PG Courses in Law | UG & PG Courses in L....</div>
+                        
+        </div>
+   </div>
+   <div id="div_line_sc"><hr/></div>
+   <div id="foot4_sc">
+    <div id="foot4_sec1_sc">
+        <div class="head1_sc">HEALTH</div>
+        <div class="p1_sc">Healthcare Management | Executive PG Program...</div>
+        <div class="p1_sc">Health | UG & PG Courses</div>
+        <div class="p1_sc">Public Health | PG Courses</div>
+        <div class="p1_sc">Nursing | PG Courses</div>
+        
+           
+    </div>
+    <div id="foot4_sec2_sc">
+        <div class="head1_sc">BACHELOR DEGREE</div>
+        <div class="p1_sc">Business Administration | Bachelor's Degree</div>
+        <div class="p1_sc">Business Administration | Bachelor's Degree</div>
+        <div class="p1_sc">Advertising & Branding | BBA</div>
+        <div class="p1_sc">Strategy & Leadership | BBA</div>
+        <div class="p1_sc">Marketing, Finance & HRM | BBA</div>
+        <div class="p1_sc">Computer Applications | Bachelor's Degree</div>
+        <div class="p1_sc">Computer Applications | Bachelor's Degree</div>
+        <div class="p1_sc">Texation and finance | Bachelor of Commerce</div>
+        <div class="p1_sc">Journalism & Mass Communication | Bachelor of ....</div>
+               
+        
+        
+    </div>
+    <div id="foot4_sec3_sc">
+        <div class="head1_sc">EDUCATION</div>
+        <div class="p1_sc">Education | PG Courses</div>
+       
+       
+    </div>
+    <div id="foot4_sec4_sc">
+        <div class="head1_sc">CRIMINOLOGY & pYSCHOLOGY</div>
+        <div class="p1_sc">Criminology | PG Courses</div>
+        <div class="p1_sc">Pyschology | UG & PG Courses</div>
+                    
+    </div>
+</div>
+<div id="div_line_sc"><hr/></div>
+<div class="p1_sc" style="padding-left: 20%;">2015-2021 upGrad Education Private Limit..</div>
+
+
+   </div> 
+
+</body>
+</html>

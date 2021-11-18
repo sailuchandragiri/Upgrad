@@ -1,0 +1,216 @@
+#exploreCourse{
+  font-family: montserrat;
+  text-align:center;
+  margin-top: 400px;
+  margin-bottom: 60px;
+  font-size: 50px;
+}
+.u_na{
+  font-family: montserrat;
+  font-size: 23px;
+  font-style: bold;
+  min-height: 60px;
+  margin-left: 3%;
+}
+.name{
+  font-size: 20px;
+  font-family: montserrat;
+  color: gray;
+  min-height: 40px;
+  padding-top: 1%;
+ 
+
+}
+#ExploreCourses_jb{
+  display: grid;
+  width: 75%;
+  grid-template-columns: 30% 60%;
+
+  gap: 4%;
+  /* border: 1px solid black; */
+  /* height: 800px; */
+  margin: auto;   
+
+}
+#coursesList_jb{
+  display: grid;
+  grid-template-columns: 100%;
+  max-height: 800px;
+  gap: 5px;
+  /* border: 1px solid black; */
+  padding-top: 20px;
+  position: sticky;
+  -webkit-position: sticky;
+  top: 10px;
+  
+ 
+
+}
+#coursesList_jb > div {
+  /* border: 1px solid black; */
+  text-align: left;
+  justify-content: center;
+  padding-top: 15px;
+  padding-left:25px ;
+  height: 35px;
+  font-size:18px;
+  font-weight: bold;
+  border-radius: 5px;
+
+ 
+}
+#show_courses_jb{
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns:49% 49%;
+  /* gap: 2%; */
+  justify-content:space-between;  
+ 
+
+}
+#show_courses_jb> div{
+  height: 380px;
+  border: 1px solid rgb(31, 66, 182); 
+  margin-top: 0px;
+  margin-bottom:8%;
+  border-radius: 10px;
+  border: 0.5px solid rgb(240, 236, 236);
+  
+    
+}
+#show_courses_jb> div>img{
+  width: 100%;
+  height: 35%;
+  border-radius: 10px 10px 0px 0px;
+ 
+  
+}
+.logodiv{
+  width: 100%;
+  min-height: 50px;
+  /* border: 1px solid black; */
+  
+  display: flex;
+  flex-direction:row;
+  padding-left: 3%;
+  
+
+}
+.logodiv>h4{
+  font-size:12px;
+ 
+  height: 30px;
+ 
+}
+.logodiv > img{
+  width: 15%;
+  min-height: 100%;
+        
+}
+#show_courses_jb> div p{
+  font-size: 13px;
+  margin:0;
+  margin-top: 8px;
+  padding-left: 3%;
+  color: gray;
+
+}
+#mba_jb{
+  background-color: #eb4d4b;
+  color: white;  
+}
+#dataScience> div p{
+  font-size: 13px;
+  margin:0;
+  margin-top: 8px;
+  color: rgb(153, 149, 149);
+  padding-left: 2%;
+  
+
+ 
+}
+#dataScience{
+   
+  display: grid;
+  grid-template-columns:49% 49%;
+  /* gap: 2%; */
+  justify-content:space-between;  
+  
+}
+#dataScience> div{
+  height: 410px;
+  border: 0.5px solid rgb(233, 230, 230);
+  margin-top: 0px;
+  margin-bottom:8%;  
+  border-radius: 10px ; 
+ 
+}
+#dataScience> div>img{
+  width: 100%;
+  height: 40%;
+  border-radius: 10px 10px 0px 0px;
+
+}
+.btn1{
+  font-size: 16px;
+  font-style: bold;
+  color: red;
+  padding-left: 23%;
+  padding-right: 23%;
+  background-color: white;
+  border: 0.5px solid rgb(225, 222, 226);
+  border-radius: 5px;
+  margin-left: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 2%;
+  
+}
+.certi{
+  font-size: 15px;
+  color: rgb(100, 96, 96);
+  font-style: bold;
+  padding-left: 5%;
+}
+.line{
+  font-size: 50px;
+  color: rgb(202, 192, 192);
+}
+.bok{
+  width: 400px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 4%;
+
+  
+}
+.bok > img{
+  width: 6%;
+  height: 100%;
+}
+.bok > p{
+  padding-top: 0;
+  width: 250px;   
+
+}
+.men{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 3%;
+
+  
+}
+.men > img{
+  width: 8%;
+}
+.men > p{
+  padding-top: 0;
+
+}
+.hori{
+  margin-left: 5%;
+  margin-right: 5%;
+}

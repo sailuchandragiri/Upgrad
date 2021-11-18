@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Preview</title>
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #preview-container-mk {
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 3px;
+      box-shadow: -10px 10px 12px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-content {
+      padding: 12px;
+    }
+
+    .table {
+      width: 100%;
+      border: 1px solid #EEEEEE;
+    }
+
+    .table-row {
+      display: flex;
+      width: 100%;
+      padding: 18px 0px;
+    }
+
+    .table-row:nth-of-type(odd) {
+      background: #EEEEEE;
+    }
+
+    .table-data {
+      flex: 1 1 20%;
+      text-align: left;
+      padding: 12px;
+    }
+
+    h1 {
+      padding-left: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="preview-container-mk">
+    <h1>Personal Information</h1>
+    <div class="table-content">
+      <div class="table-row">
+        <div class="table-data">FIRST NAME</div>
+        <div class="table-data first-name"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-data">LAST NAME</div>
+        <div class="table-data last-name"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-data">EMAIL</div>
+        <div class="table-data email">0</div>
+      </div>
+      <div class="table-row">
+        <div class="table-data">DATE OF BIRTH</div>
+        <div class="table-data dob"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-data">GENDER</div>
+        <div class="table-data gender"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-data">CITY</div>
+        <div class="table-data city"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-data">STATE</div>
+        <div class="table-data state"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-data">COUNTRY</div>
+        <div class="table-data country"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var json_data = localStorage.getItem('applicantDetails')
+  var applicantDetails = JSON.parse(json_data)
+  console.log(applicantDetails);
+
+  var fName = document.querySelector('.first-name')
+  fName.textContent = applicantDetails[0].firstName
+  var lName = document.querySelector('.last-name')
+  lName.textContent = applicantDetails[0].lastName
+  var email = document.querySelector('.email')
+  email.textContent = applicantDetails[0].email
+  var dob = document.querySelector('.dob')
+  dob.textContent = applicantDetails[0].dob
+  var gender = document.querySelector('.gender')
+  gender.textContent = applicantDetails[0].gender
+  var city = document.querySelector('.city')
+  city.textContent = applicantDetails[0].city
+  var state = document.querySelector('.state')
+  state.textContent = applicantDetails[0].state
+  var country = document.querySelector('.country')
+  country.textContent = applicantDetails[0].country
+</script>
+
+</html>

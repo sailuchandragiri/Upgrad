@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <title>Form</title>
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #form-basic-container-mk {
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 3px;
+      box-shadow: -10px 10px 12px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    #form-basic-container-mk h1 {
+      padding-left: 16px;
+    }
+
+    #form-mk {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 16px;
+      padding-bottom: 26px;
+    }
+
+    .email {
+      grid-column: 1 / 3;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+    }
+
+    input {
+      width: 80%;
+    }
+
+    .email>input {
+      width: 90%;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .inline {
+      display: inline;
+    }
+
+    #male-mk,
+    #female-mk {
+      max-width: 16px;
+    }
+
+    .form-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    input[type="text"] {
+      border: none;
+      padding: 12px;
+      border-radius: 3px;
+      outline: none;
+      font-size: 14px;
+      border: 1px solid #c9c7c7;
+    }
+
+    input:focus {
+      background-color: #f2f2f2;
+    }
+
+    #form-education-mk {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px;
+      padding-bottom: 26px;
+    }
+
+    .width-70 {
+      width: 70%;
+    }
+
+    .width-30 {
+      width: 30%;
+    }
+
+    #save-mk {
+      display: flex;
+      width: 30%;
+      border: none;
+      padding: 8px;
+      border-radius: 3px;
+      outline: none;
+      font-size: 14px;
+      border: 1px solid #c9c7c7;
+      cursor: pointer;
+      align-items: center;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="form-basic-container-mk">
+    <h1>Basic Information</h1>
+    <hr>
+    <form id="form-mk">
+      <div class="form-content">
+        <label for="first name">First Name</label>
+        <input type="text" placeholder="First Name">
+      </div>
+      <div class="form-content">
+        <label for="last name">Last Name</label>
+        <input type="text" placeholder="Last Name">
+      </div>
+      <div class="form-content email">
+        <label for="email">Email</label>
+        <input type="text" placeholder="email">
+      </div>
+      <div class="form-content dob">
+        <label for="date-of-birth">Date of Birth</label>
+        <input type="text" placeholder="DD/MM/YYYY">
+      </div>
+      <div class="form-content gender">
+        <label for="gender" class="block">Gender</label>
+        <div>
+          <input type="radio" name="gender" id="male-mk" value="male">
+          <label for="" class="inline">Male</label>
+          <input type="radio" name="gender" id="female-mk" value="female">
+          <label for="" class="inline">Female</label>
+        </div>
+      </div>
+      <div class="form-content">
+        <label for="city">city</label>
+        <input type="text" placeholder="Enter city">
+      </div>
+      <div class="form-content">
+        <label for="state">State</label>
+        <input type="text" placeholder="Enter state">
+      </div>
+      <div class="form-content">
+        <label for="country">Country</label>
+        <input type="text" placeholder="Enter country">
+      </div>
+    </form>
+  </div>
+  <div id="form-basic-container-mk">
+    <h1>Educational Qualification (Undergraduate)</h1>
+    <hr>
+    <form id="form-education-mk">
+      <div class="form-content width-70">
+        <label for="name-of-institute">Name of Institute</label>
+        <input type="text" placeholder="Enter your Institute name">
+      </div>
+      <div class="form-content width-70">
+        <label for="field-of-study">Filed of Study</label>
+        <input type="text" placeholder="Type your field of study & choose">
+      </div>
+      <div class="form-content width-70">
+        <label for="degree-level">Degree level</label>
+        <input type="text" placeholder="Select Degree level">
+      </div>
+      <div class="form-content width-70 dob">
+        <label for="marks-degree">Undergraduate - Final Degree Marks / GPA</label>
+        <input type="text" class="marks">
+      </div>
+      <div class="form-content width-30">
+        <label for="graduation-date">Month and Year of Graduation</label>
+        <input type="text" class="graduation">
+      </div>
+    </form>
+  </div>
+  <div id="form-basic-container-mk">
+    <h1>Work Experience Background (Most Recent)</h1>
+    <hr>
+    <form id="form-education-mk">
+      <div class="form-content width-70">
+        <label for="name-of-institute">Total Work Experience (in years)</label>
+        <input type="text" placeholder="Select option">
+      </div>
+      <div id="save-mk" onclick="getDetails()">
+        <p>Save & Continue</p>
+        <p>&rarr;</p>
+      </div>
+  </div>
+  </form>
+  </div>
+  <script>
+    var applicationDetails = []
+    var id = 0
+
+    function getDetails() {
+      id++
+
+      // Basic Information
+      var firstName = document.querySelector('[placeholder="First Name"]').value
+      var lastName = document.querySelector('[placeholder="Last Name"]').value
+      var email = document.querySelector('[placeholder="email"]').value
+      var dob = document.querySelector('[placeholder="DD/MM/YYYY"]').value
+      var city = document.querySelector('[placeholder="Enter city"]').value
+      var state = document.querySelector('[placeholder="Enter state"]').value
+      var country = document.querySelector('[placeholder="Enter country"]').value
+      var gender
+
+      var el = document.getElementsByName('gender')
+
+      for (let i = 0; i < el.length; i++) {
+        if (el[i].checked) {
+          gender = el[i].value
+        }
+      }
+
+      //Educational Qualification
+      var instituteName = document.querySelector('[placeholder="Enter your Institute name"]').value
+      var fieldOfStudy = document.querySelector('[placeholder="Type your field of study & choose"]').value
+      var degreeLevel = document.querySelector('[placeholder="Select Degree level"]').value
+      var marksDegree = document.querySelector('.marks').value
+      var graduationYear = document.querySelector('.graduation').value
+
+
+      // work experience
+      var workExperience = document.querySelector('[placeholder="Select option"]').value
+
+      // get male or female
+
+      applicationDetails.push({
+        id,
+        gender,
+        firstName,
+        lastName,
+        email,
+        dob,
+        city,
+        state,
+        country,
+        instituteName,
+        fieldOfStudy,
+        degreeLevel,
+        marksDegree,
+        graduationYear,
+        workExperience
+      })
+
+      var json_data = JSON.stringify(applicationDetails)
+
+      localStorage.setItem('applicantDetails', json_data)
+    }
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Certificate Program</title>
+  <style>
+    #banner-mk {
+      position: relative;
+    }
+
+    .container {
+      /* position: relative; */
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      height: 500px;
+      top: 0px;
+      right: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background: linear-gradient(to left, rgba(0, 7, 7, 0.2), rgb(0, 0, 0)), url('https://ik.imagekit.io/upgrad1/marketing-platform-assets/new-images/program-backgrounds/tr:q-2/program-banner-blockchain-pgc.jpg') no-repeat;
+      opacity: 0.9;
+      /* background-position: 100%; */
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-size: cover;
+    }
+
+    .banner-info {
+      height: auto;
+      padding-top: 36px;
+    }
+
+    .banner-title {
+      font-size: 44px;
+      line-height: 52px;
+      font-weight: 400;
+      letter-spacing: -1px;
+      width: 66%;
+    }
+
+    .banner-dec {
+      height: auto;
+      margin-right: 8px 0;
+      line-height: 24px;
+      font-size: 16px;
+      width: 60%;
+    }
+
+    .cta-btn {
+      font-size: 16px;
+      font-weight: 70;
+      width: 200px;
+      height: 44px;
+      background-color: #ef403d;
+      border: none;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .3s ease;
+    }
+
+    .modal-container {
+      /* display: none; */
+      background: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      pointer-events: none;
+      opacity: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-container.show {
+      pointer-events: auto;
+      opacity: 1
+    }
+
+    .modal {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.2);
+      width: 600px;
+      padding: 30px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .modal-cont {
+      display: flex;
+    }
+
+    .modal-image {
+      display: flex;
+      width: 205px;
+      height: 189px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-image>img {
+      width: 100%;
+    }
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      /* padding: 50px; */
+      gap: 10px;
+      align-items: left;
+    }
+
+    .modal-content h1 {
+      width: 90%;
+      text-align: left;
+      height: auto;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 112%;
+      color: #293030;
+      /* margin-top: 24px; */
+      margin-bottom: 8px;
+    }
+
+    .input-box {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .phone-number {
+      outline: none;
+      border: none;
+      width: 200px;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 100%;
+      letter-spacing: .12em;
+      color: #091e42;
+    }
+
+    .modal-button {
+      text-transform: uppercase;
+      width: 56%;
+      height: 40px;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: #ff5757;
+      color: white;
+    }
+
+    .close-me {
+      border: none;
+      background: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: #b4bac4;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .pos-rel {
+      position: relative;
+    }
+
+    .banner-partners {
+      display: flex;
+      height: 80px;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .banner-partners>img {
+      width: 80px;
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .banner-program-stats {
+      display: flex;
+      gap: 50px;
+      padding: 25px;
+      background-color: #fff;
+      color: black;
+      box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.08);
+      position: absolute;
+      top: 450px;
+    }
+
+    .stats {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-1 {
+      font-size: 30px;
+    }
+
+    .stats p {
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    .font-sm {
+      font-size: 14px;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-grey {
+      color: #b4bac4;
+      ;
+    }
+
+    #programme-overview {
+      width: 1140px;
+      margin: auto;
+      margin-top: 250px;
+      height: auto;
+    }
+
+    .content {
+      display: flex;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlight-content {
+      display: flex;
+    }
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      width: 390px;
+      height: 321px;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .card p {
+      margin-top: 24px;
+      font-size: 16px;
+      line-height: 24px;
+      font-style: italic;
+      overflow: hidden;
+      font-weight: 300;
+      color: #000;
+    }
+
+    #syllabus {
+      background-image: linear-gradient(155deg, #4661db, #4fb4c9);
+    }
+
+    .container-syllabus {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+    }
+
+    .container-syllabus p,
+    .container-syllabus h1 {
+      color: white;
+    }
+
+    .accordion {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .accordion-item {
+      background-color: #ecf3fc;
+      color: #111;
+      margin: 1rem 0;
+      border: 1px solid black;
+      /* border-radius: 0.5rem; */
+      /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25); */
+    }
+
+    .accordion-item-header {
+      padding: 0.5rem 3rem 0.5rem 1rem;
+      min-height: 3.5rem;
+      line-height: 1.25rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .accordion-item-header::after {
+      content: "\02C7";
+      font-size: 3rem;
+      position: absolute;
+      right: 1rem;
+    }
+
+    .accordion-item-header.active::after {
+      content: "\02C6";
+    }
+
+    .accordion-item-body {
+      background: #fff;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    .accordion-item-body-content {
+      padding: 1rem;
+      line-height: 1.5rem;
+      border-top: 1px solid;
+    }
+
+    .lists {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .flex-item {
+      padding-bottom: 35px;
+      border-bottom: 1px solid black;
+    }
+
+    .border-none {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="banner-mk">
+    <div class="container banner-info text-white">
+      <h1 class="banner-title pos-rel">Advanced Certificate Programme in BlockChain</h1>
+      <h2 class="banner-dec pos-rel">
+        Become a Blockchain Developer and learn how to create a blockchain from scratch, build smart contracts and
+        chaincodes.
+        <br>
+        Start your journey today by paying Rs. 4,200 per month*
+      </h2>
+      <button class="cta-btn pos-rel" id='open'>Apply Now</button>
+      <div class="banner-partners pos-rel">
+        <p>Experts from |</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" alt="">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Development_Credit_Bank.svg/2560px-Development_Credit_Bank.svg.png"
+          alt="">
+        <img
+          src="data:image/png;base64,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"
+          alt="">
+      </div>
+      <div class="banner-program-stats">
+        <div class="stats">
+          <p class="stat-1">40,000+</p>
+          <p class="font-sm">learners</p>
+        </div>
+        <div class="stats">
+          <p class="stat-1">Online</p>
+          <p class="font-sm">Format</p>
+        </div>
+        <div class="stats">
+          <p class="stat-1">7.5 Months</p>
+          <p class="font-sm">12-15 hrs/week</p>
+        </div>
+        <div class="stats">
+          <p class="stat-1">Sep 15,2021</p>
+          <p class="font-sm">Start Date</p>
+        </div>
+        <div class="stats">
+          <p class="stat-1">300+</p>
+          <p class="font-sm">Hiring Partners</p>
+        </div>
+        <div class="stats">
+          <p class="stat-1">EMI Options</p>
+          <p class="font-sm">Starting at Rs. 4,200/month*</p>
+        </div>
+      </div>
+      <!-- MODAL -->
+      <div class="modal-container" id="modal_container">
+        <div class="modal">
+          <div class="modal-cont">
+            <div class="modal-image">
+              <img src='https://image.freepik.com/free-vector/flat-university-concept-background_23-2148192915.jpg'
+                alt="imageSrc">
+            </div>
+            <div class="modal-content">
+              <h1>Enter your mobile number to start learning</h1>
+              <div class="input-box">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAANlBMVEUSiAdgmCtwcL14eMB5ecB9fcOAgMWJicmSksyTk8yTk82UlM2vr9q/v+Hg4PH/mTP/u3f///+1rU14AAAARklEQVQoz9XOMRKAIAxE0RhQBJMF7n9ZW1Kwtb4yf2Yn0in5cB6UzJXlbOEQsj3A7duc0AqU5HKRbBU49+PTVT2+dlDyWy8zUxeIwBMVGgAAAABJRU5ErkJggg=="
+                  alt="">
+                <input type="text" class="phone-number" id="phone" placeholder="9999 9999">
+              </div>
+              <button class="modal-button" id="continue">Continue</button>
+            </div>
+          </div>
+          <button class="close-me" id="close">Close me</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="programme-overview">
+    <h1>Programme Overview</h1>
+    <h3>Key Highlights</h3>
+    <div class="content">
+      <div class="highlights">
+        <div class="highlight-content">
+          <img src="" alt="">
+          <p>Designed for Working Professionals</p>
+        </div>
+        <div class="highlight-content">
+          <img src="" alt="">
+          <p>250+ Hours of Learning</p>
+        </div>
+        <div class="highlight-content">
+          <img src="" alt="">
+          <p>No Cost EMI Options available</p>
+        </div>
+        <div class="highlight-content">
+          <img src="" alt="">
+          <p>Advanced Certificate Programme from IIIT Bangalore</p>
+        </div>
+        <div class="highlight-content">
+          <img src="" alt="">
+          <p>IIIT Bangalore Alumni Status</p>
+        </div>
+        <div class="highlight-content">
+          <img src="" alt="">
+          <p>1:1 Personalised Mentorship from Blockchain Industry Experts</p>
+        </div>
+        <div class="highlight-content">
+          <img src="" alt="">
+          <p>Placement Assistance (Job Opportunities Portal, Hiring Drives, Resume Building & more)
+          </p>
+        </div>
+        <div class="highlight-content">
+          <img src="" alt="">
+          <p>Support available all days 9AM - 9PM IST for queries</p>
+        </div>
+      </div>
+      <div class="card">
+        <p>Bachelor’s Degree with 50% or equivalent passing marks. No coding experience required.
+          <br>
+          <br>
+          "Blockchain is the tech. Bitcoin is merely the first mainstream manifestation of its potential." - Marc
+          Kenigsberg
+        </p>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="syllabus">
+    <div class="container-syllabus">
+      <h1>Syllabus</h1>
+      <p>Best in-class content by leading faculty and industry leaders in the form of videos, cases and project,
+        assignments and live sessions</p>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            Pre-Requisites
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <ul class="lists">
+                <li class="flex-item">Javascript</li>
+                <li class="flex-item">Internet & Networking Basics</li>
+                <li class="flex-item border-none">Tool Node</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            Blockchain: Basics and Applications
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <ul class="lists">
+                <li class="flex-item">Node Fundamentals</li>
+                <li class="flex-item">Blockchain Basics</li>
+                <li class="flex-item">Blockchain Features</li>
+                <li class="flex-item">Ethereum Fundamentals</li>
+                <li class="flex-item">Smart Contract Development in Ethereum</li>
+                <li class="flex-item">DAPP Development in Ethereum</li>
+                <li class="flex-item">Assignment/Project</li>
+                <li class="flex-item border-none">Tools: Solidity, Ethereum, Truffle, Ganache, Metamask, Remix, IDE &
+                  Wallets</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            Building a Distributed Application on Hyperledger Fabric
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <ul class="lists">
+                <li class="flex-item">Hyperledger Fundamentals</li>
+                <li class="flex-item">Fabric Network Setup</li>
+                <li class="flex-item">Chaincode Development</li>
+                <li class="flex-item">DAPP Development</li>
+                <li class="flex-item">Assignment/Project</li>
+                <li class="flex-item border-none">Tools: YAML, Docker, Hyperledger, Fabric, Node & Express</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            Architecting Blockchain Applications (Delivered Live)
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <ul class="lists">
+                <li class="flex-item">UPSTAC Covid App Architecting and Development</li>
+                <li class="flex-item">Architecting a DeFi application</li>
+                <li class="flex-item">Other Blockchain Frameworks and their Use Cases</li>
+                <li class="flex-item">Assignment/Project</li>
+                <li class="flex-item">Exam weel</li>
+                <li class="flex-item border-none">Tools: Hyperledger, Fabric, MonogDB, Express, Node, Docker,
+                  Kubernettes, BaSS,
+                  Ethereum & Solidity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            Capstone Project
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              <ul class="lists">
+                <li class="flex-item border-none">Capstone Project</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script>
+  var open = document.getElementById('open')
+  var modal_container = document.querySelector('.modal-container')
+  var close = document.getElementById('close')
+  var number
+  var otp = document.getElementById('continue')
+
+  otp.addEventListener('click', () => {
+    number = document.getElementById('phone').value
+    console.log(number);
+    modal_container.remove()
+    setTimeout(() => {
+      modal()
+      var ctn = document.querySelector('.next')
+      ctn.addEventListener('click', () => {
+        // window.location.href = 'http://127.0.0.1:5500/form.html'
+        window.location.href = 'http://127.0.0.1:5501/rough-draft/upgrade-clone/form.html'
+      })
+    }, 2000)
+
+    setTimeout(() => {
+      var insertNum = document.querySelector('.otp')
+      var num = Math.floor(Math.random() * 4000) + 1000
+      insertNum.value = num
+    }, 4000)
+  })
+
+
+  open.addEventListener('click', () => {
+    if (!modal_container.classList.contains('show')) {
+      modal_container.classList.add('show')
+    }
+  })
+
+  close.addEventListener('click', () => {
+    if (modal_container.classList.contains('show')) {
+      console.log('click');
+      modal_container.classList.remove('show')
+    }
+  })
+
+  // overall container
+  var container = document.querySelector('.container')
+
+  function modal() {
+    var modalContainer = document.createElement('div');
+    modalContainer.className = 'modal-container show';
+    modalContainer.id = 'modal_container';
+
+    var modal = document.createElement('div');
+    modal.className = 'modal';
+
+    var modalCont = document.createElement('div');
+    modalCont.className = 'modal-cont';
+
+    var modalImage = document.createElement('div');
+    modalImage.className = 'modal-image';
+
+    var image = document.createElement('img');
+    image.src =
+      'https://image.freepik.com/free-vector/flat-university-concept-background_23-2148192915.jpg';
+
+    modalImage.append(image);
+
+    var modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
+
+    var h1 = document.createElement('h1');
+    h1.textContent = 'Enter the code sent to your phone';
+
+    var p = document.createElement('p');
+    p.className = 'text-left text-grey'
+    p.textContent = `We sent it to ${number}`;
+
+    var inputBox = document.createElement('div');
+    inputBox.className = 'input-box';
+
+    var inputImage = document.createElement('img');
+    inputImage.src =
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAANlBMVEUSiAdgmCtwcL14eMB5ecB9fcOAgMWJicmSksyTk8yTk82UlM2vr9q/v+Hg4PH/mTP/u3f///+1rU14AAAARklEQVQoz9XOMRKAIAxE0RhQBJMF7n9ZW1Kwtb4yf2Yn0in5cB6UzJXlbOEQsj3A7duc0AqU5HKRbBU49+PTVT2+dlDyWy8zUxeIwBMVGgAAAABJRU5ErkJggg==';
+
+    var input = document.createElement('input');
+    input.className = 'phone-number otp';
+    input.id = 'phone';
+    input.placeholder = '0000';
+
+    inputBox.append(inputImage, input);
+
+    var continueBtn = document.createElement('button');
+    continueBtn.textContent = 'Continue';
+    continueBtn.className = 'modal-button next';
+
+    modalContent.append(h1, p, inputBox, continueBtn);
+
+    var closeBtn = document.createElement('button')
+    closeBtn.textContent = 'Close me'
+    closeBtn.className = 'close-me'
+    closeBtn.id = 'close'
+
+    closeBtn.onclick = function () {
+      var remove = document.querySelector('.modal-container')
+      if (remove.classList.contains('show')) {
+        remove.classList.remove('show')
+      }
+    }
+
+    var open = document.querySelector('.cta-btn')
+
+    open.onclick = function () {
+      var adding = document.querySelector('.modal-container')
+      if (!adding.classList.contains('show')) {
+        adding.classList.add('show')
+      }
+    }
+
+    modalCont.append(modalImage, modalContent)
+
+    modal.append(modalCont, closeBtn);
+
+    modalContainer.append(modal);
+
+    container.append(modalContainer);
+  }
+
+  const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+  accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", event => {
+
+      const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+      if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
+        currentlyActiveAccordionItemHeader.classList.toggle("active");
+        currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+      }
+
+      accordionItemHeader.classList.toggle("active");
+      const accordionItemBody = accordionItemHeader.nextElementSibling;
+      if (accordionItemHeader.classList.contains("active")) {
+        accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+      } else {
+        accordionItemBody.style.maxHeight = 0;
+      }
+
+    });
+  });
+</script>
+
+</html>
